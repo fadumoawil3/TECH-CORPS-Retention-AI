@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Assistant — TECH CORPS AI</title>
+  <meta name="description" content="Ask the TECH CORPS Program Retention Analysis Assistant about attendance, engagement, and retention." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <!-- ============================== NAVIGATION ============================== -->
+  <header class="site-nav">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 12h4l2-6 4 12 2-6h4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        TECH CORPS AI
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chatbot.html">AI Assistant</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Quiet echo of the homepage's pathway motif, used here as a section divider -->
+  <div class="container">
+    <div class="pathway-divider">
+      <svg viewBox="0 0 860 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:100%; max-width:600px; margin:0 auto; display:block;">
+        <line x1="10" y1="10" x2="850" y2="10" stroke="var(--color-line)" stroke-width="2"/>
+        <circle cx="10" cy="10" r="4" style="fill:var(--color-blue)"/>
+        <circle cx="430" cy="10" r="4" style="fill:var(--color-amber)"/>
+        <circle cx="850" cy="10" r="4" style="fill:var(--color-green)"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ============================== PAGE HEADER ============================== -->
+  <section class="page-header">
+    <div class="container">
+      <span class="eyebrow"><span class="dot"></span> AI Assistant</span>
+      <h1>Program Retention Analysis Assistant</h1>
+      <p class="lede">Ask about attendance, engagement, and retention in plain language — the assistant answers with a clear summary, key insights, and next steps.</p>
+    </div>
+  </section>
+
+  <!-- ============================== CHAT ============================== -->
+  <section>
+    <div class="container">
+      <div class="chat-shell">
+
+        <div class="chat-window">
+          <div class="chat-log" id="chatLog">
+            <!-- Opening message from the assistant -->
+            <div class="msg msg-ai">
+              <div class="msg-avatar">AI</div>
+              <div class="msg-bubble">
+                <p>Hi! I'm the TECH CORPS Program Retention Analysis Assistant. I can help you look at attendance, engagement, and retention patterns, and suggest ways to support students who may be at risk.</p>
+                <p>What would you like to look into?</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="chat-input-row" id="chatForm">
+            <label for="chatInput" class="sr-only" style="position:absolute; left:-9999px;">Message the assistant</label>
+            <input type="text" id="chatInput" name="chatInput" placeholder="Ask about retention, attendance, or at-risk students…" autocomplete="off" />
+            <button type="submit" aria-label="Send message">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 12L20 4L13 20L11 13L4 12Z" stroke="white" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- ============================== SUGGESTED PROMPTS ============================== -->
+        <div class="suggested-prompts">
+          <button type="button" class="prompt-chip">What factors improve student retention?</button>
+          <button type="button" class="prompt-chip">Which students may need additional support?</button>
+          <button type="button" class="prompt-chip">Why did attendance decrease?</button>
+          <button type="button" class="prompt-chip">Summarize the engagement data.</button>
+          <button type="button" class="prompt-chip">Generate recommendations.</button>
+        </div>
+
+        <p class="chat-disclaimer">Responses are placeholders for now. This assistant will not share private student information and does not provide medical or legal advice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <span class="footer-brand">TECH CORPS AI</span>
+      <div class="footer-meta">
+        <span>Team Prompt Patrols</span>
+        <span>Project for TECH CORPS</span>
+        <span>Built with HTML, CSS, and JavaScript</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

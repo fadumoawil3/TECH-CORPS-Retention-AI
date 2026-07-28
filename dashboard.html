@@ -1,1 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — TECH CORPS AI</title>
+  <meta name="description" content="Retention analytics dashboard for TECH CORPS staff." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <!-- ============================== NAVIGATION ============================== -->
+  <header class="site-nav">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 12h4l2-6 4 12 2-6h4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        TECH CORPS AI
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chatbot.html">AI Assistant</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="pathway-divider">
+      <svg viewBox="0 0 860 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:100%; max-width:600px; margin:0 auto; display:block;">
+        <line x1="10" y1="10" x2="850" y2="10" stroke="var(--color-line)" stroke-width="2"/>
+        <circle cx="10" cy="10" r="4" style="fill:var(--color-blue)"/>
+        <circle cx="430" cy="10" r="4" style="fill:var(--color-amber)"/>
+        <circle cx="850" cy="10" r="4" style="fill:var(--color-green)"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ============================== PAGE HEADER ============================== -->
+  <section class="page-header">
+    <div class="container">
+      <span class="eyebrow"><span class="dot"></span> Dashboard</span>
+      <h1>Retention at a glance</h1>
+      <p class="lede">A snapshot of program health — sample metrics for now, ready to be replaced with live Google Sheets data.</p>
+    </div>
+  </section>
+
+  <!-- ============================== STATS ============================== -->
+  <section style="padding-top: 20px;">
+    <div class="container">
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-label">Retention Rate</div>
+          <div class="stat-value">78%</div>
+          <span class="stat-trend up">▲ 4% vs last term</span>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Average Attendance</div>
+          <div class="stat-value">86%</div>
+          <span class="stat-trend down">▼ 2% vs last term</span>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Survey Satisfaction</div>
+          <div class="stat-value">4.3<span style="font-size:1.1rem; color:var(--color-slate-light);">/5</span></div>
+          <span class="stat-trend up">▲ 0.2 vs last term</span>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Programs Completed</div>
+          <div class="stat-value">312</div>
+          <span class="stat-trend up">▲ 18 vs last term</span>
+        </div>
+      </div>
+
+      <!-- ============================== INSIGHTS + RECOMMENDATIONS ============================== -->
+      <div class="dash-grid">
+        <div class="panel">
+          <h3>Insights</h3>
+          <p class="panel-sub">Patterns the assistant has surfaced from program data.</p>
+          <ul class="insight-list">
+            <li class="insight-item">
+              <span class="insight-tag positive">On track</span>
+              <span class="insight-text">Students with higher attendance generally complete programs.</span>
+            </li>
+            <li class="insight-item">
+              <span class="insight-tag attention">Needs attention</span>
+              <span class="insight-text">Students with lower satisfaction scores may disengage.</span>
+            </li>
+            <li class="insight-item">
+              <span class="insight-tag positive">On track</span>
+              <span class="insight-text">Mentor participation appears to improve retention.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Recommendations</h3>
+          <p class="panel-sub">Suggested next steps for staff.</p>
+          <ul class="recommend-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Check in with students whose attendance has dropped in the last two weeks.
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Pair unmatched students with a mentor early in the program.
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Send a short satisfaction survey mid-program to catch disengagement early.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <span class="footer-brand">TECH CORPS AI</span>
+      <div class="footer-meta">
+        <span>Team Prompt Patrols</span>
+        <span>Project for TECH CORPS</span>
+        <span>Built with HTML, CSS, and JavaScript</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

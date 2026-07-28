@@ -1,1 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TECH CORPS AI — Program Retention Analysis System</title>
+  <meta name="description" content="AI-powered retention analysis for TECH CORPS staff, coordinators, and mentors." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <!-- ============================== NAVIGATION ============================== -->
+  <header class="site-nav">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 12h4l2-6 4 12 2-6h4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        TECH CORPS AI
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chatbot.html">AI Assistant</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============================== HERO ============================== -->
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow"><span class="dot"></span> Program Retention Analysis System</span>
+      <h1>TECH CORPS Program Retention Analysis System</h1>
+      <p class="lede">Helping TECH CORPS analyze student engagement, improve retention, and make data-driven decisions using AI.</p>
+      <div class="hero-actions">
+        <a href="chatbot.html" class="btn btn-primary">Launch AI Assistant</a>
+        <a href="dashboard.html" class="btn btn-secondary">View Dashboard</a>
+      </div>
+
+      <!-- Signature visual: a student's path through the program. This
+           same "pathway" idea reappears as a quiet divider on the other
+           pages, so the retention story threads through the whole site. -->
+      <div class="pathway">
+        <svg viewBox="0 0 860 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Student journey from enrollment to program completion, with an at-risk stage flagged">
+          <line x1="40" y1="55" x2="820" y2="55" stroke="var(--color-line)" stroke-width="2"/>
+          <line x1="40" y1="55" x2="820" y2="55" stroke="var(--color-blue)" stroke-width="2" stroke-dasharray="4 6" opacity="0.5"/>
+
+          <g>
+            <circle cx="40" cy="55" r="10" style="fill:var(--color-blue)"/>
+            <text x="40" y="90" text-anchor="middle" style="font-family:var(--font-mono); font-size:12px; fill:var(--color-slate)">Enrolled</text>
+          </g>
+          <g>
+            <circle cx="235" cy="55" r="10" style="fill:var(--color-blue)"/>
+            <text x="235" y="90" text-anchor="middle" style="font-family:var(--font-mono); font-size:12px; fill:var(--color-slate)">Engaged</text>
+          </g>
+          <g>
+            <circle cx="430" cy="55" r="12" style="fill:var(--color-amber)"/>
+            <text x="430" y="90" text-anchor="middle" style="font-family:var(--font-mono); font-size:12px; fill:var(--color-amber)">At-Risk Flag</text>
+          </g>
+          <g>
+            <circle cx="625" cy="55" r="10" style="fill:var(--color-blue)"/>
+            <text x="625" y="90" text-anchor="middle" style="font-family:var(--font-mono); font-size:12px; fill:var(--color-slate)">Supported</text>
+          </g>
+          <g>
+            <circle cx="820" cy="55" r="10" style="fill:var(--color-green)"/>
+            <text x="820" y="90" text-anchor="middle" style="font-family:var(--font-mono); font-size:12px; fill:var(--color-slate)">Completed</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== PROBLEM ============================== -->
+  <section class="problem">
+    <div class="container problem-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> The Problem</span>
+        <h2>Retention answers are buried in the data staff already collect.</h2>
+        <ul class="problem-list">
+          <li><span class="marker">01</span> TECH CORPS has years of attendance, survey, participation, and demographic data.</li>
+          <li><span class="marker">02</span> Finding meaningful retention patterns manually is difficult and time-consuming.</li>
+          <li><span class="marker">03</span> Our AI assistant helps staff analyze this information quickly, so the data gets used instead of just stored.</li>
+        </ul>
+      </div>
+      <div class="problem-panel">
+        <h3>What staff are working with today</h3>
+        <p>Spreadsheets of attendance logs, satisfaction surveys, mentor notes, and completion records — all real signal, but scattered across sources and hard to read as a whole.</p>
+        <h3>What the assistant changes</h3>
+        <p>Ask a plain-language question. Get a structured answer: what's happening, who might need support, and what to try next.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== FEATURES ============================== -->
+  <section class="features">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow"><span class="dot"></span> What It Does</span>
+        <h2>Three ways the assistant supports your program</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 19V9M11 19V5M18 19v-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Analyze Retention</h3>
+          <p>Identify trends that influence student success.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 9v4m0 4h.01M10.3 3.9L2.7 17.1a1.8 1.8 0 001.55 2.7h15.5a1.8 1.8 0 001.55-2.7L13.7 3.9a1.8 1.8 0 00-3.4 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Identify At-Risk Students</h3>
+          <p>Recognize students who may benefit from additional support.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 3L4 14h7l-1 7 9-11h-7l1-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Generate Recommendations</h3>
+          <p>Provide practical suggestions for improving programs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== CTA ============================== -->
+  <section>
+    <div class="container">
+      <div class="cta-band">
+        <h2>Ready to see it in action?</h2>
+        <p>Ask the AI Assistant a question about retention, or open the dashboard to see program metrics at a glance.</p>
+        <div class="hero-actions">
+          <a href="chatbot.html" class="btn btn-primary">Launch AI Assistant</a>
+          <a href="dashboard.html" class="btn btn-secondary">View Dashboard</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <span class="footer-brand">TECH CORPS AI</span>
+      <div class="footer-meta">
+        <span>Team Prompt Patrols</span>
+        <span>Project for TECH CORPS</span>
+        <span>Built with HTML, CSS, and JavaScript</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
