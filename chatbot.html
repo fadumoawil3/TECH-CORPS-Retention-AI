@@ -60,6 +60,32 @@
     <div class="container">
       <div class="chat-shell">
 
+        <!-- ============================== DATA UPLOAD ============================== -->
+        <div class="upload-panel">
+          <div class="upload-zone" id="uploadZone" tabindex="0" role="button" aria-label="Upload a spreadsheet">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="upload-icon">
+              <path d="M12 16V4m0 0L7 9m5-5l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p class="upload-title">Upload your program data</p>
+            <p class="upload-hint">Drop a CSV or Excel file, or <span class="upload-link">choose a file</span>. From Google Sheets, use <strong>File → Download</strong> first, then upload the exported .csv or .xlsx.</p>
+            <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" hidden />
+          </div>
+
+          <div class="upload-status" id="uploadStatus" hidden>
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="upload-status-icon">
+              <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div class="upload-status-text">
+              <p class="upload-filename" id="uploadFilename"></p>
+              <p class="upload-meta" id="uploadMeta"></p>
+            </div>
+            <button type="button" class="upload-remove" id="uploadRemove">Remove</button>
+          </div>
+
+          <p class="upload-error" id="uploadError" hidden></p>
+        </div>
+
         <div class="chat-window">
           <div class="chat-log" id="chatLog">
             <!-- Opening message from the assistant -->
@@ -109,6 +135,10 @@
     </div>
   </footer>
 
+  <!-- SheetJS reads spreadsheet files (.csv, .xlsx, .xls) entirely in the
+       browser — no server needed. This is what makes the upload feature
+       below work without a backend. -->
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
